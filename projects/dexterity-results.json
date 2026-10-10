@@ -1,0 +1,21 @@
+{
+  "scope": "Offline kinematic replay only; no real-hand dynamics or physical contact validation.",
+  "reference": "Screen-guided imitation of ORCA reference poses; not measured human joint ground truth.",
+  "data": {
+    "source_records": 223,
+    "training_records": 155,
+    "reserved_test_records": 50,
+    "diagnostic_records": 5
+  },
+  "baseline": {
+    "reference_joint_rmse_deg": 23.55690977309343,
+    "ik_target_error_mm": 2.837621385504745,
+    "final_reference_error_mm": 32.220885256276695
+  },
+  "weak_posture_prior": {
+    "reference_joint_rmse_deg": 23.196120876206713,
+    "ik_target_error_mm": 2.863067256814224,
+    "final_reference_error_mm": 32.05125725002484
+  },
+  "validation_policy": "Reserved poses are excluded from fitting and model selection; repeated pose groups held out together."
+}
