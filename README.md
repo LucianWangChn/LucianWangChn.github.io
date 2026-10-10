@@ -1,9 +1,17 @@
-# Chenxu Wang — Academic Homepage
+# 王晨旭的个人主页
 
-Personal academic portfolio for Chenxu Wang, undergraduate student in Electronic Information Engineering at Beijing Institute of Technology.
+地址：https://lucianwangchn.github.io/
 
-Research interests: **Embodied AI · Robot Learning · Dexterous Manipulation · Human–Robot Interaction**.
+基于 GitHub Pages v2 素材改为中文，展示教育背景、学习成绩、项目经历及对应获奖成果。纯静态页面，无需构建，GitHub Pages 从 main 分支根目录发布。
 
-The static portfolio is prepared for GitHub Pages. Site assets and CV will be added to the repository root.
+## 内容维护
 
-Contact: [chenxuwang.chn@outlook.com](mailto:chenxuwang.chn@outlook.com)
+- `index.html`：页面文案与链接。
+- `assets/style.css`：桌面与移动端布局。
+- `assets/dexterity.jpg`：灵巧手实拍照片，纵向完整展示。
+- `Chenxu_Wang_Academic_CV.docx` / `.pdf`：中文简历可编辑版与下载版。
+
+学习成绩按本人最新说明：大一学年纯成绩 2/230，综测 1/230；CET-4 613。
+未来设计师 NCDA 全国三等奖与屠龙勇士校二等奖已核对本地证书；国家奖学金、华为 OPC 优秀奖、机器人竞赛校三等奖按本人说明列入。
+国创赛列为省赛金奖争夺赛备赛中，最终结果公布后更新。未将预计奖项写成已获荣誉。
+网站不公开原始成绩报告单、身份证明或完整证书扫描件。
