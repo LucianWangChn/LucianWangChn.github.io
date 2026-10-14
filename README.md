@@ -1,6 +1,8 @@
 # 王晨旭的个人主页
 
-地址：https://lucianwangchn.github.io/
+2026-10-14 交互改造的设计、浏览器验证、Git 基线和发布说明见 [INTERACTION_REDESIGN.md](INTERACTION_REDESIGN.md)。
+
+正式域名：https://lucianwang.com/；GitHub Pages 备用地址：https://lucianwangchn.github.io/。
 
 基于 GitHub Pages v2 素材改为中文，展示教育背景、学习成绩、项目经历及对应获奖成果。纯静态页面，无需构建，GitHub Pages 从 main 分支根目录发布。
 
@@ -9,7 +11,8 @@
 - `index.html`：页面文案与链接。
 - `assets/style.css`：桌面与移动端布局。
 - `assets/dexterity.jpg`：灵巧手实拍照片，纵向完整展示。
-- `Chenxu_Wang_Academic_CV.docx` / `.pdf`：中文简历可编辑版与下载版。
+- `Chenxu_Wang_Academic_CV.pdf`：当前下载版，2026-10-14 原样替换为本人指定的《王晨旭简历_北京理工大学.pdf》。
+- `Chenxu_Wang_Academic_CV.docx`：历史编辑稿，不再显示于首页下载入口。
 
 学习成绩按本人最新说明：大一学年纯成绩 2/230，综测 1/230；CET-4 613。
 未来设计师 NCDA 全国三等奖与屠龙勇士校二等奖已核对本地证书；国家奖学金、华为 OPC 优秀奖、机器人竞赛校三等奖按本人说明列入。

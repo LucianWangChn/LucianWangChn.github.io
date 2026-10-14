@@ -1,0 +1,6 @@
+# Local QA artifacts and Python caches
+__pycache__/
+*.pyc
+.qa/
+node_modules/
+releases/
