@@ -1,5 +1,7 @@
 # 王晨旭的个人主页
 
+2026-10-14 交互改造的设计、浏览器验证、Git 基线和发布说明见 [INTERACTION_REDESIGN.md](INTERACTION_REDESIGN.md)。
+
 地址：https://lucianwangchn.github.io/
 
 基于 GitHub Pages v2 素材改为中文，展示教育背景、学习成绩、项目经历及对应获奖成果。纯静态页面，无需构建，GitHub Pages 从 main 分支根目录发布。
