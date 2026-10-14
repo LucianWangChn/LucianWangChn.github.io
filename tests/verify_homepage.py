@@ -4,13 +4,14 @@ Requires Python Playwright and an installed Chromium browser. Artifacts are
 written to ignored .qa/; these tools are not required by the website itself.
 """
 import json
+import os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / '.qa'
 OUT.mkdir(exist_ok=True)
-URL = 'http://127.0.0.1:8765/'
+URL = os.environ.get('HOMEPAGE_URL', 'http://127.0.0.1:8765/').rstrip('/') + '/'
 results = []
 
 
@@ -76,12 +77,15 @@ with sync_playwright() as p:
     check('motion responds to system preference change', page.locator('.motion-toggle').get_attribute('aria-pressed') == 'true')
     anchors = page.locator('a[href^="#"]').evaluate_all('els => els.map(e => e.hash.slice(1))')
     check('all local anchors resolve', all(page.locator(f'[id="{anchor}"]').count() == 1 for anchor in anchors))
-    for target in ('Chenxu_Wang_Academic_CV.pdf', 'Chenxu_Wang_Academic_CV.docx', 'projects/dexterity.html', 'projects/signspeak.html', 'projects/xingju.html'):
+    for target in ('Chenxu_Wang_Academic_CV.pdf?v=20261014', 'projects/dexterity.html', 'projects/signspeak.html', 'projects/xingju.html'):
         response = context.request.get(URL + target)
         check(f'local download/page reachable: {target}', response.status == 200 and len(response.body()) > 100)
+        if target.startswith('Chenxu_Wang_Academic_CV.pdf'):
+            check('served resume exactly matches selected PDF', response.body() == (ROOT / 'Chenxu_Wang_Academic_CV.pdf').read_bytes())
+    check('homepage does not offer the old Word resume', page.locator('a[href*="Academic_CV.docx"]').count() == 0)
     with page.expect_download() as download:
         page.locator('.nav-cv').click()
-    check('PDF download works', download.value.suggested_filename.endswith('.pdf'))
+    check('PDF download filename matches selected resume', download.value.suggested_filename == '王晨旭简历_北京理工大学.pdf')
     for section in ('about', 'research', 'education', 'projects', 'honors', 'contact'):
         page.locator(f'#{section}').scroll_into_view_if_needed()
         settle(page)
